@@ -1,148 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Cancun Getaways Tours</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cancun Getaways Tours</title>
+
+<meta name="description" content="Best Cancun Tours and Riviera Maya Adventures. Book snorkeling, Chichen Itza, ATV, Cenotes and more.">
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
+font-family:Arial;
 margin:0;
 background:#f5f5f5;
 }
 
 header{
-background:url('hero.jpg') center/cover no-repeat;
-height:80vh;
+background:#00a8e8;
 color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
+padding:30px;
 }
 
 header h1{
-font-size:48px;
 margin:0;
+font-size:36px;
 }
 
 header p{
-font-size:20px;
-max-width:600px;
-}
-
-button{
-background:#ff7a00;
-border:none;
-padding:15px 30px;
 font-size:18px;
-color:white;
-cursor:pointer;
-}
-
-section{
-padding:60px 10%;
 }
 
 .tours{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
+padding:40px;
 }
 
 .tour{
 background:white;
-border-radius:10px;
+border-radius:12px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .tour img{
 width:100%;
-height:200px;
+height:220px;
 object-fit:cover;
 }
 
+.tour-content{
+padding:20px;
+}
+
 .tour h3{
-padding:10px;
+margin-top:0;
+}
+
+.price{
+color:#00a8e8;
+font-weight:bold;
+font-size:18px;
+margin:10px 0;
+}
+
+.book{
+display:inline-block;
+background:#00a8e8;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.book:hover{
+background:#0077aa;
 }
 
 footer{
-background:#111;
+background:#222;
 color:white;
 text-align:center;
-padding:40px;
+padding:30px;
+margin-top:40px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <h1>Cancun Getaways Tours</h1>
-<p>Explore Cancun & Riviera Maya with unforgettable experiences.</p>
-<button>View Tours</button>
+
+<p>Top Cancun & Riviera Maya Adventures</p>
+
 </header>
 
-<section>
-<h2>Our Top Tours</h2>
 
-<div class="tours">
+<section class="tours">
 
 <div class="tour">
-<img src="images/cozumel.jpeg">
+
+<img src="images/cozumel.jpeg" alt="Isla Mujeres Catamaran Tour Cancun">
+
+<div class="tour-content">
+
 <h3>Isla Mujeres Catamaran Cruise & Snorkeling</h3>
+
+<p>Sail the Caribbean waters, snorkel the reef and enjoy a delicious lunch in Isla Mujeres.</p>
+
+<div class="price">From $79 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
 </div>
 
-<div class="tour">
-<img src="images/tirolesa hombre.jpeg">
-<h3>ATV, Zipline & Cenote Adventure</h3>
 </div>
 
+
 <div class="tour">
-<img src="images/bote transparente mujer.jpeg">
+
+<img src="images/tirolesa-hombre.jpeg" alt="ATV Zipline Cenote Adventure Cancun">
+
+<div class="tour-content">
+
+<h3>ATV, Zipline & Cenote Jungle Adventure</h3>
+
+<p>Experience thrilling ziplines, ATV ride and swim in a beautiful jungle cenote.</p>
+
+<div class="price">From $99 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
+</div>
+
+</div>
+
+
+<div class="tour">
+
+<img src="images/bote-transparente-mujer.jpeg" alt="Transparent Boat Cancun">
+
+<div class="tour-content">
+
 <h3>Transparent Boat Ride Cancun</h3>
+
+<p>Discover the Caribbean underwater world on the famous transparent boat.</p>
+
+<div class="price">From $59 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
 </div>
 
-<div class="tour">
-<img src="images/tulum de fondo.jpeg">
-<h3>Tulum Jungle Adventure</h3>
 </div>
 
+
 <div class="tour">
-<img src="images/speedboat pareja.jpeg">
+
+<img src="images/tulum-fondo.jpeg" alt="Tulum Adventure Tour">
+
+<div class="tour-content">
+
+<h3>Tulum Jungle Adventure Tour</h3>
+
+<p>Explore the Mayan ruins of Tulum combined with jungle adventure activities.</p>
+
+<div class="price">From $119 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
+</div>
+
+</div>
+
+
+<div class="tour">
+
+<img src="images/speedboat-pareja.jpeg" alt="Speedboat Cancun Tour">
+
+<div class="tour-content">
+
 <h3>Cancun Speedboat & Snorkeling Adventure</h3>
+
+<p>Drive your own speedboat through the mangroves and snorkel the reef.</p>
+
+<div class="price">From $79 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
 </div>
 
-<div class="tour">
-<img src="images/chichen mujer.jpeg">
-<h3>Chichen Itza, Cenote & Valladolid Tour</h3>
 </div>
 
+
 <div class="tour">
-<img src="images/coba grupal.jpeg">
+
+<img src="images/chichen-mujer.jpeg" alt="Chichen Itza Tour">
+
+<div class="tour-content">
+
+<h3>Chichen Itza, Cenote & Valladolid Day Tour</h3>
+
+<p>Visit the New Wonder of the World and swim in a sacred cenote.</p>
+
+<div class="price">From $129 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
+</div>
+
+</div>
+
+
+<div class="tour">
+
+<img src="images/coba-grupal.jpeg" alt="Tulum Coba Cenote Tour">
+
+<div class="tour-content">
+
 <h3>Tulum, Coba & Cenote Full Day Tour</h3>
+
+<p>Discover ancient Mayan cities and enjoy a refreshing cenote swim.</p>
+
+<div class="price">From $129 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
 </div>
+
+</div>
+
 
 <div class="tour">
-<img src="images/cenote hacia abajo.jpeg">
+
+<img src="images/cenote-hacia-abajo.jpeg" alt="Riviera Maya Cenote Tour">
+
+<div class="tour-content">
+
 <h3>Riviera Maya Cenote Experience</h3>
+
+<p>Explore hidden cenotes in the jungle and enjoy crystal clear waters.</p>
+
+<div class="price">From $89 USD</div>
+
+<a class="book" href="https://wa.me/529611057104">Book Now</a>
+
 </div>
 
-
 </div>
+
 </section>
+
 
 <footer>
 
+<p>Contact us</p>
+
 <p>Email: cancungetawaystours@gmail.com</p>
+
 <p>Phone: +52 961 105 7104</p>
+
+<p>© Cancun Getaways Tours</p>
 
 </footer>
 
+
+<a class="whatsapp" href="https://wa.me/529611057104">WhatsApp</a>
+
+
 </body>
+
 </html>
