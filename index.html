@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 
@@ -20,88 +19,78 @@ color:#333;
 }
 
 header{
-background:url('images/tulum-de-fondo.jpeg') center/cover no-repeat;
-height:90vh;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.logo{
+height:90px;
+}
+
+.hero{
+background:url('images/hero.jpg') center/cover no-repeat;
+height:85vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
-position:relative;
+padding:20px;
 }
 
-header::after{
-content:'';
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,70,70,0.55);
+.hero h1{
+font-size:56px;
+margin:0;
 }
 
-header *{
-position:relative;
-z-index:2;
-}
-
-.logo{
-position:absolute;
-top:20px;
-left:40px;
-z-index:3;
-}
-
-.logo img{
-height:60px;
-}
-
-header h1{
-font-size:52px;
-margin-bottom:10px;
-}
-
-header p{
+.hero p{
 font-size:22px;
-max-width:600px;
+max-width:650px;
 }
 
-.cta{
+.hero button{
 background:#d4af37;
 border:none;
-padding:16px 34px;
+padding:16px 32px;
 font-size:18px;
-border-radius:30px;
+color:white;
 cursor:pointer;
-margin-top:20px;
+border-radius:5px;
 }
 
 section{
-padding:80px 10%;
+padding:70px 10%;
 }
 
 h2{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:40px;
+font-size:36px;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.6;
 }
 
 .tours{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .tour{
 background:white;
 border-radius:12px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:.3s;
-}
-
-.tour:hover{
-transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
 .tour img{
@@ -112,143 +101,148 @@ object-fit:cover;
 
 .tour h3{
 padding:15px;
-font-size:20px;
+font-size:18px;
 }
 
 .book{
 display:block;
-text-align:center;
-margin:15px;
+margin:0 15px 20px 15px;
 padding:12px;
-background:#008c8c;
+background:#0aa89e;
 color:white;
+text-align:center;
 text-decoration:none;
-border-radius:8px;
+border-radius:5px;
+font-weight:600;
+}
+
+.book:hover{
+background:#087f78;
 }
 
 .reviews{
-background:#ffffff;
+background:#eaf6f5;
 text-align:center;
 }
 
 .review{
 max-width:700px;
 margin:auto;
-font-size:18px;
+font-style:italic;
 margin-bottom:25px;
 }
 
-.stars{
-color:#f7b500;
-font-size:22px;
-}
-
-.why{
-background:#e9f5f4;
-text-align:center;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-}
-
-.feature{
-font-size:18px;
-}
-
 footer{
-background:#003c3c;
+background:#0f2e2d;
 color:white;
 text-align:center;
-padding:50px;
+padding:40px;
+font-size:16px;
 }
 
 .whatsapp{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 background:#25D366;
 color:white;
-padding:16px 20px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
-font-size:18px;
+font-weight:600;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="logo">
-<img src="images/logo.png">
-</div>
-
 <header>
-
-<h1>Cancun Getaways Tours</h1>
-
-<p>Unforgettable experiences in Cancun & Riviera Maya</p>
-
-<a href="#tours"><button class="cta">Explore Tours</button></a>
-
+<img src="images/logo.png" class="logo">
 </header>
+
+<section class="hero">
+
+<h1>Discover Cancun & Riviera Maya</h1>
+
+<p>Unforgettable adventures, turquoise waters and ancient wonders await.</p>
+
+<button onclick="document.getElementById('tours').scrollIntoView({behavior:'smooth'})">
+View Tours
+</button>
+
+</section>
+
+<section class="about">
+
+<h2>About Cancun Getaways Tours</h2>
+
+<p>
+At Cancun Getaways Tours we specialize in unforgettable experiences across Cancun and the Riviera Maya.
+Our goal is to show travelers the most breathtaking places in the region with personalized service,
+local expertise and carefully selected tours.
+</p>
+
+<p>
+From snorkeling in turquoise Caribbean waters to exploring ancient Mayan cities and hidden cenotes,
+every tour is designed to create memories that last a lifetime.
+</p>
+
+</section>
 
 <section id="tours">
 
-<h2>Top Tours in Cancun</h2>
+<h2>Our Top Tours</h2>
 
 <div class="tours">
 
 <div class="tour">
-<img src="images/cozumel.jpeg">
-<h3>Isla Mujeres Catamaran & Snorkel Cruise</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<img src="images/isla-mujeres.jpg">
+<h3>Isla Mujeres Catamaran Cruise & Snorkeling with Lunch</h3>
+<a href="#" class="book">Book Now</a>
 </div>
 
 <div class="tour">
-<img src="images/tirolesa-hombre.jpeg">
-<h3>ATV, Zipline & Cenote Adventure</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<img src="images/atv-zipline-cenote.jpg">
+<h3>ATV, Zipline & Cenote Adventure with Traditional Lunch</h3>
+<a href="#" class="book">Book Now</a>
 </div>
 
 <div class="tour">
-<img src="images/bote-transparente-mujer.jpeg">
-<h3>Transparent Boat Experience Cancun</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<img src="images/transparent-boat.jpg">
+<h3>Transparent Boat Ride Cancun – Snap, Smile & Float</h3>
+<a href="#" class="book">Book Now</a>
 </div>
 
 <div class="tour">
-<img src="images/tulum-de-fondo.jpeg">
-<h3>Tulum Jungle & Cenote Adventure</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<img src="images/tulum-adventure.jpg">
+<h3>Tulum Jungle Adventure: ATV, Zipline & Cenote</h3>
+<a href="#" class="book">Book Now</a>
 </div>
 
 <div class="tour">
-<img src="images/speedboat-pareja.jpeg">
-<h3>Cancun Speedboat & Snorkel Tour</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<img src="images/speedboat.jpg">
+<h3>Cancun Speedboat & Snorkeling Adventure</h3>
+<a href="#" class="book">Book Now</a>
 </div>
 
 <div class="tour">
-<img src="images/chichen-mujer.jpeg">
-<h3>Chichen Itza, Cenote & Valladolid</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<img src="images/chichen-itza.jpg">
+<h3>Chichen Itza, Cenote Swim & Valladolid Full Day Tour</h3>
+<a href="#" class="book">Book Now</a>
 </div>
 
 <div class="tour">
-<img src="images/coba-grupal.jpeg">
-<h3>Tulum, Coba & Cenote Full Day</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<img src="images/tulum-coba.jpg">
+<h3>Tulum, Coba & Cenote Explorer with Playa del Carmen Stop</h3>
+<a href="#" class="book">Book Now</a>
 </div>
 
 <div class="tour">
-<img src="images/cenote-hacia-abajo.jpeg">
+<img src="images/cenote.jpg">
 <h3>Riviera Maya Cenote Experience</h3>
-<a class="book" href="#" target="_blank">Book on Viator</a>
+<a href="#" class="book">Book Now</a>
 </div>
 
 </div>
@@ -259,44 +253,33 @@ font-size:18px;
 
 <h2>Traveler Reviews</h2>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Amazing tour! Everything was perfectly organized and the cenote was beautiful."</p>
-</div>
+<p class="review">
+"One of the best experiences we had in Cancun! Everything was perfectly organized and our guide was amazing."
+</p>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Best experience in Cancun. Highly recommended!"</p>
-</div>
+<p class="review">
+"Highly recommend Cancun Getaways Tours! The cenotes and Chichen Itza tour was unforgettable."
+</p>
 
-<p>Verified reviews from Viator & GetYourGuide</p>
-
-</section>
-
-<section class="why">
-
-<h2>Why Book With Us</h2>
-
-<div class="features">
-
-<div class="feature">⭐ Top Rated Experiences</div>
-<div class="feature">🌴 Local Cancun Experts</div>
-<div class="feature">🚐 Transportation Included</div>
-<div class="feature">💬 24/7 Customer Support</div>
-
-</div>
+<p>
+Top rated experiences available on Viator and GetYourGuide.
+</p>
 
 </section>
 
 <footer>
 
 <p>Email: cancungetawaystours@gmail.com</p>
-<p>Phone / WhatsApp: +52 961 105 7104</p>
+
+<p>Phone / WhatsApp: +52 9611057104</p>
+
 <p>© Cancun Getaways Tours</p>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/529611057104?text=Hello!%20I%20would%20like%20information%20about%20Cancun%20Getaways%20Tours" target="_blank">
+<a class="whatsapp" 
+href="https://wa.me/529611057104?text=Hello!%20I'm%20interested%20in%20the%20tours%20offered%20by%20Cancun%20Getaways%20Tours.%20Could%20you%20send%20me%20more%20information?" 
+target="_blank">
 WhatsApp
 </a>
 
