@@ -5,9 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cancun Getaways Tours</title>
+<title>Cancún Getaways Tours</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 
@@ -18,21 +20,31 @@ background:#f4f8f7;
 color:#333;
 }
 
-header{
-background:white;
+nav{
+position:fixed;
+top:0;
+width:100%;
 display:flex;
+justify-content:space-between;
 align-items:center;
-justify-content:center;
-padding:20px;
+padding:15px 8%;
+z-index:1000;
 }
 
 .logo{
-height:110px;
+height:95px;
+}
+
+.menu a{
+margin-left:25px;
+text-decoration:none;
+color:white;
+font-weight:500;
 }
 
 .hero{
-background:url('images/cenote-hacia-abajo-sin-gente.jpeg') center/cover no-repeat;
-height:85vh;
+background:url('images/hero.jpg') center/cover no-repeat;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -40,6 +52,22 @@ align-items:center;
 text-align:center;
 color:white;
 padding:20px;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
 }
 
 .hero h1{
@@ -60,10 +88,11 @@ font-size:18px;
 color:white;
 cursor:pointer;
 border-radius:5px;
+margin-top:20px;
 }
 
 section{
-padding:70px 10%;
+padding:80px 10%;
 }
 
 h2{
@@ -78,6 +107,20 @@ margin:auto;
 text-align:center;
 font-size:18px;
 line-height:1.6;
+}
+
+.why{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.why div{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
 }
 
 .tours{
@@ -116,10 +159,6 @@ border-radius:5px;
 font-weight:600;
 }
 
-.book:hover{
-background:#087f78;
-}
-
 .reviews{
 background:#eaf6f5;
 text-align:center;
@@ -154,32 +193,49 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<nav>
+
 <img src="images/logo.png" class="logo">
-</header>
+
+<div class="menu">
+
+<a href="#">Home</a>
+<a href="#tours">Tours</a>
+<a href="#reviews">Reviews</a>
+
+</div>
+
+</nav>
 
 <section class="hero">
 
-<h1>Discover Cancun & Riviera Maya</h1>
+<div class="hero-content">
 
-<p>Unforgettable adventures across the Mexican Caribbean.</p>
+<h1>Explore Cancún & Riviera Maya with Cancun Getaways Tours</h1>
+
+<p>
+Unforgettable adventures, local experts and the best experiences in the Mexican Caribbean.
+</p>
 
 <button onclick="document.getElementById('tours').scrollIntoView({behavior:'smooth'})">
 View Tours
 </button>
 
+</div>
+
 </section>
 
-<section class="about">
+<section class="about" data-aos="fade-up">
 
 <h2>About Cancun Getaways Tours</h2>
 
 <p>
-Cancun Getaways Tours offers unforgettable experiences across Cancun and the Riviera Maya.
+Cancún Getaways Tours offers unforgettable experiences across Cancún and the Riviera Maya.
 We specialize in carefully selected adventures designed to show travelers the very best of the Mexican Caribbean.
 </p>
 
@@ -190,55 +246,70 @@ and hidden cenotes, our tours create memories that last a lifetime.
 
 </section>
 
+<section data-aos="fade-up">
+
+<h2>Why Choose Us</h2>
+
+<div class="why">
+
+<div>⭐ Top Rated Experiences</div>
+<div>🌴 Local Cancún Experts</div>
+<div>🛥 Small Group Adventures</div>
+<div>💬 Fast WhatsApp Support</div>
+
+</div>
+
+</section>
+
 <section id="tours">
 
 <h2>Our Top Tours</h2>
 
 <div class="tours">
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/cozumel.jpeg">
 <h3>Isla Mujeres Catamaran Cruise & Snorkeling</h3>
 <a href="#" class="book">Book Now</a>
 </div>
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/tirolesa-hombre.jpeg">
 <h3>ATV, Zipline & Cenote Adventure</h3>
 <a href="#" class="book">Book Now</a>
 </div>
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/bote-transparente-mujer.jpeg">
-<h3>Transparent Boat Ride Cancun</h3>
+<h3>Transparent Boat Ride Cancún</h3>
 <a href="#" class="book">Book Now</a>
 </div>
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/tulum-de-fondo.jpeg">
 <h3>Tulum Jungle Adventure</h3>
 <a href="#" class="book">Book Now</a>
 </div>
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/speedboat-pareja.jpeg">
-<h3>Cancun Speedboat & Snorkeling Adventure</h3>
+<h3>Cancún Speedboat & Snorkeling Adventure</h3>
 <a href="#" class="book">Book Now</a>
 </div>
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/chichen-mujer.jpeg">
-<h3>Chichen Itza, Cenote & Valladolid Tour</h3>
+<h3>Chichén Itzá, Cenote & Valladolid Tour</h3>
 <a href="#" class="book">Book Now</a>
 </div>
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/coba-grupal.jpeg">
-<h3>Tulum, Coba & Cenote Full Day Tour</h3>
+<h3>Tulum, Cobá & Cenote Full Day Tour</h3>
 <a href="#" class="book">Book Now</a>
 </div>
 
-<div class="tour">
+<div class="tour" data-aos="fade-up">
 <img src="images/cenote-hacia-abajo.jpeg">
 <h3>Riviera Maya Cenote Experience</h3>
 <a href="#" class="book">Book Now</a>
@@ -248,16 +319,16 @@ and hidden cenotes, our tours create memories that last a lifetime.
 
 </section>
 
-<section class="reviews">
+<section class="reviews" id="reviews">
 
 <h2>Traveler Reviews</h2>
 
 <p class="review">
-"One of the best experiences we had in Cancun! Everything was perfectly organized and our guide was amazing."
+⭐⭐⭐⭐⭐ One of the best experiences we had in Cancún. Everything was perfectly organized.
 </p>
 
 <p class="review">
-"Highly recommend Cancun Getaways Tours! The cenotes and Chichen Itza tour was unforgettable."
+⭐⭐⭐⭐⭐ Highly recommend this tour company. The cenotes and Chichén Itzá tour was incredible.
 </p>
 
 <p>
@@ -272,7 +343,9 @@ Top rated experiences available on Viator and GetYourGuide.
 
 <p>Phone / WhatsApp: +52 9611057104</p>
 
-<p>© Cancun Getaways Tours</p>
+<p>Operating in Cancún & Riviera Maya</p>
+
+<p>© Cancún Getaways Tours</p>
 
 </footer>
 
@@ -281,6 +354,12 @@ href="https://wa.me/529611057104?text=Hello!%20I'm%20interested%20in%20the%20tou
 target="_blank">
 WhatsApp
 </a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
 
 </body>
 </html>
