@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,27 +7,27 @@
 
 <title>Cancún Getaways Tours</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
 box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
 
-font-family:'Poppins',sans-serif;
-margin:0;
+font-family:'Inter',sans-serif;
 color:#333;
 
 background:
-linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.95)),
-url('images/fondo.png');
+linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.95)),
+url("images/fondo.png");
 
 background-size:cover;
+background-position:center;
 background-attachment:fixed;
 
 overflow-x:hidden;
@@ -37,7 +36,7 @@ overflow-x:hidden;
 
 /* NAVBAR */
 
-nav{
+.navbar{
 
 position:fixed;
 top:0;
@@ -47,24 +46,28 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:6px 8%;
+padding:10px 40px;
 
-background:rgba(0,0,0,0.35);
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(8px);
+
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
 
 z-index:1000;
 
 }
 
 .logo{
-height:75px;
+
+height:60px;
+
 }
 
-.menu a{
+.nav-links a{
 
 margin-left:25px;
 text-decoration:none;
-color:white;
+color:#333;
 font-weight:500;
 
 }
@@ -73,93 +76,61 @@ font-weight:500;
 
 .hero{
 
-background:url('images/cenote-hacia-abajo-sin-gente.jpeg') center/cover no-repeat;
-
-height:90vh;
+height:85vh;
 
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-
+justify-content:center;
 text-align:center;
+
+padding:120px 20px 60px 20px;
+
+background:
+
+linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.35)),
+url("images/hero.jpg");
+
+background-size:cover;
+background-position:center;
+
 color:white;
-
-position:relative;
-
-}
-
-.hero::before{
-
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.45);
-
-}
-
-.hero-content{
-
-position:relative;
-z-index:2;
-padding:20px;
 
 }
 
 .hero h1{
 
-font-size:56px;
-margin:0;
+font-size:48px;
+margin-bottom:20px;
+
+text-shadow:0 6px 25px rgba(0,0,0,0.4);
 
 }
 
 .hero p{
 
-font-size:22px;
-max-width:650px;
-
-}
-
-.hero button{
-
-background:#d4af37;
-border:none;
-padding:16px 34px;
-font-size:18px;
-color:white;
-cursor:pointer;
-border-radius:6px;
-margin-top:20px;
+font-size:20px;
 
 }
 
 /* SECTIONS */
 
-section{
+.section{
 
-padding:90px 10%;
+max-width:1200px;
+margin:80px auto;
 
-}
+padding:60px 40px;
 
-/* CARDS */
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(6px);
 
-.card{
-
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(10px);
-
-padding:50px;
 border-radius:18px;
 
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
-
-max-width:1000px;
-margin:auto;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
 
 }
 
-h2{
+.section h2{
 
 text-align:center;
 margin-bottom:40px;
@@ -167,41 +138,52 @@ font-size:36px;
 
 }
 
-/* WHY */
+/* PARAGRAPHS */
 
-.why{
+.section p{
+
+background:rgba(255,255,255,0.6);
+padding:16px 20px;
+
+border-radius:10px;
+
+box-shadow:0 6px 16px rgba(0,0,0,0.06);
+
+line-height:1.6;
+
+}
+
+/* WHY CHOOSE US */
+
+.features{
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-
-margin-top:40px;
+gap:30px;
 
 }
 
-.why div{
+.feature{
 
-background:linear-gradient(135deg,#0aa89e,#0f6f73);
+background:linear-gradient(135deg,#3fb7a8,#2f8f88);
 
 color:white;
 
-padding:35px;
-
+padding:30px;
 border-radius:16px;
-
-font-weight:500;
 
 text-align:center;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 
-transition:.3s;
+transition:0.3s;
 
 }
 
-.why div:hover{
+.feature:hover{
 
 transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
 
 }
 
@@ -211,109 +193,94 @@ transform:translateY(-6px);
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+gap:30px;
 
 }
 
-.tour{
+.tour-card{
 
 background:white;
-
 border-radius:14px;
 overflow:hidden;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
 
-transition:.3s;
-
-}
-
-.tour:hover{
-
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
+transition:0.3s;
 
 }
 
-.tour img{
+.tour-card:hover{
+
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.18);
+
+}
+
+.tour-card img{
 
 width:100%;
-height:210px;
+height:180px;
 object-fit:cover;
 
 }
 
-.tour h3{
+.tour-card h3{
 
 padding:18px;
+font-size:18px;
 
 }
 
-.book{
-
-display:block;
-
-margin:0 18px 22px 18px;
-
-padding:13px;
-
-background:#0aa89e;
-color:white;
-
-text-align:center;
-text-decoration:none;
-
-border-radius:6px;
-
-font-weight:600;
-
-}
-
-/* REVIEWS */
-
-.review{
-
-font-style:italic;
-margin-bottom:20px;
-text-align:center;
-
-}
-
-/* FOOTER */
-
-footer{
-
-background:#0f2e2d;
-color:white;
-
-text-align:center;
-
-padding:40px;
-
-margin-top:80px;
-
-}
-
-/* WHATSAPP */
+/* WHATSAPP BUTTON */
 
 .whatsapp{
 
 position:fixed;
-bottom:20px;
-right:20px;
+right:25px;
+bottom:25px;
 
 background:#25D366;
 color:white;
 
-padding:15px 20px;
+padding:14px 20px;
 
-border-radius:50px;
+border-radius:40px;
 
 text-decoration:none;
 
 font-weight:600;
 
-box-shadow:0 6px 18px rgba(0,0,0,0.25);
+box-shadow:0 10px 20px rgba(0,0,0,0.25);
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.05);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.navbar{
+
+padding:10px 20px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.section{
+
+padding:40px 20px;
+
+}
 
 }
 
@@ -323,11 +290,13 @@ box-shadow:0 6px 18px rgba(0,0,0,0.25);
 
 <body>
 
-<nav>
+<!-- NAVBAR -->
+
+<div class="navbar">
 
 <img src="images/logo.png" class="logo">
 
-<div class="menu">
+<div class="nav-links">
 
 <a href="#">Home</a>
 <a href="#tours">Tours</a>
@@ -335,136 +304,116 @@ box-shadow:0 6px 18px rgba(0,0,0,0.25);
 
 </div>
 
-</nav>
+</div>
+
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
-<h1>Explore Cancún & Riviera Maya with Cancún Getaways Tours</h1>
+<h1>Cancún Getaways Tours</h1>
 
-<p>
-Unforgettable adventures and the best experiences in the Mexican Caribbean.
-</p>
-
-<button onclick="document.getElementById('tours').scrollIntoView({behavior:'smooth'})">
-View Tours
-</button>
+<p>Unforgettable adventures across Cancún & the Riviera Maya</p>
 
 </div>
 
 </section>
 
-<section data-aos="fade-up">
+<!-- ABOUT -->
 
-<div class="card">
+<section class="section">
 
 <h2>About Cancún Getaways Tours</h2>
 
 <p>
-Cancún Getaways Tours offers unforgettable experiences across Cancún and the Riviera Maya.
-We specialize in carefully selected adventures designed to show travelers the very best of the Mexican Caribbean.
-</p>
 
-<p>
-From snorkeling in turquoise waters and sailing to Isla Mujeres, to exploring ancient Mayan cities
-and hidden cenotes, our tours create memories that last a lifetime.
-</p>
+We specialize in unforgettable experiences across Cancún and the Riviera Maya.
+Our mission is simple: connect travelers with the most breathtaking places in the Mexican Caribbean through small-group adventures, trusted guides, and seamless service.
 
-</div>
+</p>
 
 </section>
 
-<section data-aos="fade-up">
+<!-- WHY CHOOSE US -->
+
+<section class="section">
 
 <h2>Why Choose Us?</h2>
 
-<div class="why">
+<div class="features">
 
-<div>⭐ Top Rated Experiences</div>
-<div>🌴 Local Cancún Experts</div>
-<div>🛥 Small Group Adventures</div>
-<div>💬 Fast WhatsApp Support</div>
+<div class="feature">⭐ Top Rated Experiences</div>
+
+<div class="feature">🌴 Local Cancún Experts</div>
+
+<div class="feature">🚤 Small Group Adventures</div>
+
+<div class="feature">💬 Fast WhatsApp Support</div>
 
 </div>
 
 </section>
 
-<section id="tours">
+<!-- TOURS -->
+
+<section class="section" id="tours">
 
 <h2>Our Top Tours</h2>
 
 <div class="tours">
 
-<div class="tour">
-<img src="images/cozumel.jpeg">
-<h3>Isla Mujeres Catamaran Cruise & Snorkeling</h3>
-<a href="#" class="book">Book Now</a>
+<div class="tour-card">
+<img src="images/tour1.jpg">
+<h3>Tour 1</h3>
 </div>
 
-<div class="tour">
-<img src="images/tirolesa-hombre.jpeg">
-<h3>ATV, Zipline & Cenote Adventure</h3>
-<a href="#" class="book">Book Now</a>
+<div class="tour-card">
+<img src="images/tour2.jpg">
+<h3>Tour 2</h3>
 </div>
 
-<div class="tour">
-<img src="images/bote-transparente-mujer.jpeg">
-<h3>Transparent Boat Ride Cancún</h3>
-<a href="#" class="book">Book Now</a>
+<div class="tour-card">
+<img src="images/tour3.jpg">
+<h3>Tour 3</h3>
 </div>
 
-<div class="tour">
-<img src="images/tulum-de-fondo.jpeg">
-<h3>Tulum Jungle Adventure</h3>
-<a href="#" class="book">Book Now</a>
+<div class="tour-card">
+<img src="images/tour4.jpg">
+<h3>Tour 4</h3>
+</div>
+
+<div class="tour-card">
+<img src="images/tour5.jpg">
+<h3>Tour 5</h3>
+</div>
+
+<div class="tour-card">
+<img src="images/tour6.jpg">
+<h3>Tour 6</h3>
+</div>
+
+<div class="tour-card">
+<img src="images/tour7.jpg">
+<h3>Tour 7</h3>
+</div>
+
+<div class="tour-card">
+<img src="images/tour8.jpg">
+<h3>Tour 8</h3>
 </div>
 
 </div>
 
 </section>
 
-<section id="reviews">
+<!-- WHATSAPP -->
 
-<div class="card">
-
-<h2>Traveler Reviews</h2>
-
-<p class="review">
-⭐⭐⭐⭐⭐ One of the best experiences we had in Cancún.
-</p>
-
-<p class="review">
-⭐⭐⭐⭐⭐ Highly recommend this tour company.
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>Email: cancungetawaystours@gmail.com</p>
-
-<p>Phone / WhatsApp: +52 9611057104</p>
-
-<p>© Cancún Getaways Tours</p>
-
-</footer>
-
-<a class="whatsapp"
-href="https://wa.me/529611057104?text=Hello!%20I'm%20interested%20in%20the%20tours"
-target="_blank">
+<a class="whatsapp" href="https://wa.me/529611057104" target="_blank">
 
 💬 Ask about tours
 
 </a>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-AOS.init({duration:1000,once:true});
-</script>
 
 </body>
 </html>
